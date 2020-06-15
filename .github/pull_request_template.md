@@ -7,8 +7,8 @@ Use the relevant following section and delete the rest, as well as this introduc
 
 # Add Project
 
-* What is this tool?
-* Why should this tool be maintained by the Working Group?
+* What is this project or set of packages?
+* Why should this project be maintained by the Working Group?
 
 In your changes, you have added a list item to "Subprojects" in `README.md`, following this format:
 
