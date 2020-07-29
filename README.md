@@ -105,8 +105,8 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 
 ### Meetings
 
-* Regular WG Meeting: TBD
-  * https://discourse.ros.org/c/tsc
+* Regular WG Meeting: Bi-weekly on Wednesdays at 8am PST
+  * https://index.ros.org/doc/ros2/Governance/#upcoming-ros-events
   * We will have meeting minutes posted after each meeting.
 
 ### Communication Channels
@@ -115,7 +115,7 @@ This working group will use discourse, and where appropriate GitHub issues, to h
 
 ### Backlog Management
 
-TBD
+Issues in this repository, using GitHub Project Boards as needed to organize our efforts.
 
 ### Membership, Roles and Organization Management
 
