@@ -1,19 +1,10 @@
-# {{NAME}} Working Group
-
-{{
-TEMPLATE: This repository acts as a template for individual Working Groups to start from.
-All information in double curly-braces must be replaced with details for the specific Working Group.
-NOTE: check the issue and pull request templates as well, under `.github` directory.
-
-This is a template repository.
-When starting a new working group, [use this template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to create a new repository in the WG organization.
-}}
+# Middlware Working Group
 
 This document defines the scope and governance of the Working Group (WG).
 
-{{Mission: The {{NAME}} Working Group's mission is to...}}
+The Middleware Working Group's mission is to identify and address issues with usability and performance in the core communication features of ROS 2 which are provided by the middleware (i.e. implementation of the `rmw` API) or one of the client libraries (e.g. `rclcpp` or `rclpy`).
 
-{{Scope: the types of topics, tools, libraries, applications, documents, etc, that this working group focuses on. }}
+This working group will focus on the core ROS 2 stack, including the `rmw` API and its various implementations as well as the client libraries like `rcl`, `rclcpp`, and `rclpy`.
 
 ## Subprojects
 
@@ -24,14 +15,54 @@ Its meetings and membership are largely focused on the direction, design, and wo
 
 The following subprojects are owned by the Working Group:
 
-{{
-
-* template-project
-  * Description: Brief description of project. Remove this item and add new projects using this format.
+* ros2/rmw
+  * Description: ROS 2's middleware abstraction layer is defined by this API, it affects the code above, e.g. `rcl` and client libraries, as well as the middleware providers which implement it.
   * Repositories
-    * link-to-repository
+    * https://github.com/ros2/rmw
+    * https://github.com/ros2/rmw_implementation
+* ros2/rosidl
+  * Description: These packages provide ROS 2's user type abstraction interface, allowing the users to define new types and use them with the commuinication features provided by the client libraries.
+  * Repositories
+    * https://github.com/ros2/rosidl
+    * https://github.com/ros2/rosidl_typesupport
+    * https://github.com/ros2/rosidl_defaults
+* ros2/rmw_fastrtps
+  * Description: These packages provide an implementation of the `rmw` interface using Fast-RTPS (a.k.a. Fast-DDS) and is one of the tier 1 rmw implementations according to [REP-2000](https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023) as of the Foxy Fitzroy release.
+  * Repositories
+    * https://github.com/ros2/rmw_fastrtps
+    * https://github.com/ros2/rosidl_typesupport_fastrtps
+* ros2/rmw_cyclonedds
+  * Description: These packages provide an implementation of the `rmw` interface using CycloneDDS and is one of the tier 1 rmw implementations according to [REP-2000](https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023) as of the Foxy Fitzroy release.
+  * Repositories
+    * https://github.com/ros2/rmw_cyclonedds
+* ros2/rmw_connext
+  * Description: These packages provide an implementation of the `rmw` interface using RTI Connext Pro and is one of the tier 1 rmw implementations according to [REP-2000](https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023) as of the Foxy Fitzroy release.
+  * Repositories
+    * https://github.com/ros2/rmw_connext
+    * https://github.com/ros2/rosidl_typesupport_connext
 
-}}
+#### Related Projects
+
+These projects will be impacted directly by decisions made in this working group, but are not solely "owned" or "managed" by this working group as they will potentially overlap with other working groups.
+This working group will not enforce standards (described below), but these projects will likely follow similar rules and this working group will assist with the maintenance and upkeep of these projects as it is able.
+
+* ros2/rcl
+  * Description: These packages build on the middleware abstraction and provides implementations of things commonly needed in language specific client libraries.
+  * Repositories
+    * https://github.com/ros2/rcl
+    * https://github.com/ros2/rcl_logging
+    * https://github.com/ros2/rcl_interfaces
+* ros2/rclcpp
+  * Description: These packages provide the main user facing C++ API, including access to the middleware features.
+  * Repositories
+    * https://github.com/ros2/rclcpp
+    * https://github.com/ros2/rosidl
+* ros2/rclpy
+  * Description: These packages provide the main user facing Python API, including access to the middleware features.
+  * Repositories
+    * https://github.com/ros2/rclpy
+    * https://github.com/ros2/rosidl_python
+    * https://github.com/ros2/rosidl_runtime_py
 
 ### Standards for subprojects
 
@@ -74,17 +105,17 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 
 ### Meetings
 
-* Regular WG Meeting: {{time schedule for meetings}}
-  * {{when and where will meetings be announced}}
-  * {{what artifacts will be posted after the meetings, e.g. Minutes, Recordings}}
+* Regular WG Meeting: Bi-weekly on Wednesdays at 8am PST
+  * https://index.ros.org/doc/ros2/Governance/#upcoming-ros-events
+  * We will have meeting minutes posted after each meeting.
 
 ### Communication Channels
 
-{{How can members communicate with each other? Discourse, Discord, IRC, email list, etc.}}
+This working group will use discourse, and where appropriate GitHub issues, to have discussions offline.
 
 ### Backlog Management
 
-{{Is any project management software/site used to track work for this Working Group? How can new members discover the highest impact tasks they could take on? GitHub Projects, ZenHub, etc.}}
+Issues in this repository, using GitHub Project Boards as needed to organize our efforts.
 
 ### Membership, Roles and Organization Management
 
