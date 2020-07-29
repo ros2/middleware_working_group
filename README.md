@@ -26,6 +26,26 @@ The following subprojects are owned by the Working Group:
     * https://github.com/ros2/rosidl
     * https://github.com/ros2/rosidl_typesupport
     * https://github.com/ros2/rosidl_defaults
+* ros2/rmw_fastrtps
+  * Description: These packages provide an implementation of the `rmw` interface using Fast-RTPS (a.k.a. Fast-DDS) and is one of the tier 1 rmw implementations according to [REP-2000](https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023) as of the Foxy Fitzroy release.
+  * Repositories
+    * https://github.com/ros2/rmw_fastrtps
+    * https://github.com/ros2/rosidl_typesupport_fastrtps
+* ros2/rmw_cyclonedds
+  * Description: These packages provide an implementation of the `rmw` interface using CycloneDDS and is one of the tier 1 rmw implementations according to [REP-2000](https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023) as of the Foxy Fitzroy release.
+  * Repositories
+    * https://github.com/ros2/rmw_cyclonedds
+* ros2/rmw_connext
+  * Description: These packages provide an implementation of the `rmw` interface using RTI Connext Pro and is one of the tier 1 rmw implementations according to [REP-2000](https://www.ros.org/reps/rep-2000.html#foxy-fitzroy-may-2020-may-2023) as of the Foxy Fitzroy release.
+  * Repositories
+    * https://github.com/ros2/rmw_connext
+    * https://github.com/ros2/rosidl_typesupport_connext
+
+#### Related Projects
+
+These projects will be impacted directly by decisions made in this working group, but are not solely "owned" or "managed" by this working group as they will potentially overlap with other working groups.
+This working group will not enforce standards (described below), but these projects will likely follow similar rules and this working group will assist with the maintenance and upkeep of these projects as it is able.
+
 * ros2/rcl
   * Description: These packages build on the middleware abstraction and provides implementations of things commonly needed in language specific client libraries.
   * Repositories
